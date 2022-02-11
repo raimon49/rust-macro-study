@@ -4,5 +4,5 @@ macro_rules! my_assert_eq {
     });
 }
 fn main() {
-    println!("Hello, world!");
+    my_assert_eq!(1, 2);
 }
