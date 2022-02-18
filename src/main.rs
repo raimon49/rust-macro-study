@@ -29,4 +29,5 @@ fn main() {
     my_assert_eq!(1, 1);
     my_assert_eq!(gcd(6, 10), 2);
     my_assert_eq![gcd(6, 10), 2];
+    my_assert_eq!{gcd(6, 10), 2};
 }
