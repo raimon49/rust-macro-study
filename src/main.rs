@@ -32,4 +32,6 @@ fn main() {
     my_assert_eq!(gcd(6, 10), 2);
     my_assert_eq![gcd(6, 10), 2];
     my_assert_eq!{gcd(6, 10), 2};
+    // 中括弧呼び出しの時だけセミコロンを省略可能
+    my_assert_eq!{gcd(6, 10), 2}
 }
