@@ -34,4 +34,8 @@ fn main() {
     my_assert_eq!{gcd(6, 10), 2};
     // 中括弧呼び出しの時だけセミコロンを省略可能
     my_assert_eq!{gcd(6, 10), 2}
+
+    let _vec_1 = vec![1, 2, 3];
+    let _vec_2 = vec!(1, 2, 3);
+    let _vec_3 = vec!{1, 2, 3};
 }
