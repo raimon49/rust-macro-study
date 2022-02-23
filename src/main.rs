@@ -1,5 +1,6 @@
 macro_rules! my_assert_eq {
     // パターンを定義し、パターンマッチした対象に適用するテンプレートを書く
+    // フラグメント型が「:expr」なので、$leftも$rightも引数に式が来ることを期待している
     ($left:expr , $right:expr) => ({
         // {} の中身がテンプレート
         match (&$left, &$right) {
