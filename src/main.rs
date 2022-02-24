@@ -5,6 +5,7 @@ macro_rules! my_assert_eq {
         // {} の中身がテンプレート
         match (&$left, &$right) {
             (left_val, right_val) => {
+                // マクロ呼び出し時に所有権が移動しないよう参照で比較
                 if !(*left_val == *right_val) {
                     panic!("assertion failed: `(left == right)` (left: `{:?}`, right: `{:?}`)", left_val, right_val);
                 }
