@@ -14,6 +14,18 @@ macro_rules! my_assert_eq {
     });
 }
 
+macro_rules! my_vec {
+    ($elem:expr ; $n:expr) => {
+        ::std::vec::from_elem($elem, $n)
+    };
+    ( $( $x:expr ),* ) => {
+        <[_]>::into_vec(Box::new([ $( $x ),* ]))
+    };
+    ( $( $x:expr ),+ ,) => {
+        vec![ $( $x ),* ]
+    };
+}
+
 fn gcd(mut n: u64, mut m: u64) -> u64 {
     assert!(n != 0 && m != 0);
     while m != 0 {
