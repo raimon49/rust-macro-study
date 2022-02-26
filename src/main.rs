@@ -55,4 +55,6 @@ fn main() {
     assert_eq!(vec_1, vec_2); // assert_eqマクロを()で呼ぶのも慣例で、実際は[]でも{}でも呼び出せる
     assert_eq![vec_1, vec_3];
     assert_eq!{vec_2, vec_3}
+
+    let _buffer = my_vec![0_u8; 1000];
 }
