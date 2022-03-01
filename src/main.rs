@@ -56,5 +56,5 @@ fn main() {
     assert_eq![vec_1, vec_3];
     assert_eq!{vec_2, vec_3}
 
-    let _buffer = my_vec![0_u8; 1000];
+    let _buffer = my_vec![0_u8; 1000]; // 値を1,000回繰り返して生成
 }
