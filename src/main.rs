@@ -18,9 +18,15 @@ macro_rules! my_vec {
     ($elem:expr ; $n:expr) => {
         ::std::vec::from_elem($elem, $n)
     };
+    // 0個以上のカンマで区切られた呼び出しにマッチ
     ( $( $x:expr ),* ) => {
         <[_]>::into_vec(Box::new([ $( $x ),* ]))
+        // 以下と同義
+        // let mut v = Vec::new();
+        // $( v.push($x); )*
+        // v
     };
+    // 1個以上のカンマで区切られた呼び出しにマッチ
     ( $( $x:expr ),+ ,) => {
         vec![ $( $x ),* ]
     };
