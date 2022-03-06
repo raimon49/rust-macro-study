@@ -67,4 +67,7 @@ fn main() {
     let _numbers = my_vec!["udon", "ramen", "soba"]; // カンマで区切られた値のリストで生成
     let _recursive_call = my_vec!["udon", "ramen",]; // ケツカンマに対応したマクロ記述のため通る
     my_assert_eq!(_recursive_call, my_vec!["udon", "ramen"]);
+
+    let version = env!("CARGO_PKG_VERSION");
+    println!("CARGO_PKG_VERSION: {}", version);
 }
