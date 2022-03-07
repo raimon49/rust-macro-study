@@ -70,4 +70,6 @@ fn main() {
 
     let version = env!("CARGO_PKG_VERSION");
     println!("CARGO_PKG_VERSION: {}", version);
+    let undefined_variable = option_env!("NOT_DEFINED");
+    my_assert_eq!(undefined_variable, None);
 }
