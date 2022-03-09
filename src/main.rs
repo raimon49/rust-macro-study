@@ -1,3 +1,4 @@
+#[feature(trace_macros)]
 macro_rules! my_assert_eq {
     // パターンを定義し、パターンマッチした対象に適用するテンプレートを書く
     // フラグメント型が「:expr」なので、$leftも$rightも引数に式が来ることを期待している
@@ -47,6 +48,8 @@ fn gcd(mut n: u64, mut m: u64) -> u64 {
 }
 
 fn main() {
+    // trueで読みだすと定義したマクロ呼び出しの展開前と展開後のコードを出力する
+    // trace_macros!(true);
     my_assert_eq!(1, 1);
 
     // マクロを呼び出す時の括弧には慣例で()が使われるが、[]でも{}でも呼び出せる
