@@ -58,6 +58,17 @@ enum Json {
     Object(Box<HashMap<String, Json>>)
 }
 
+macro_rules! json {
+    (null) => {
+        Json::Null
+    }
+}
+
+#[test]
+fn json_null() {
+    my_assert_eq!(json!(null), Json::Null);
+}
+
 fn main() {
     // trueで読みだすと定義したマクロ呼び出しの展開前と展開後のコードを出力する
     // trace_macros!(true);
