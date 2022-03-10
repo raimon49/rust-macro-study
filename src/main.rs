@@ -47,6 +47,17 @@ fn gcd(mut n: u64, mut m: u64) -> u64 {
     n
 }
 
+use std::collections::HashMap;
+#[derive(Clone, PartialEq, Debug)]
+enum Json {
+    Null,
+    Boolean(bool),
+    Number(f64),
+    String(String),
+    Array(Vec<Json>),
+    Object(Box<HashMap<String, Json>>)
+}
+
 fn main() {
     // trueで読みだすと定義したマクロ呼び出しの展開前と展開後のコードを出力する
     // trace_macros!(true);
