@@ -61,7 +61,10 @@ enum Json {
 macro_rules! json {
     (null) => {
         Json::Null
-    }
+    };
+    ([ $( $element:expr ),* ]) => {
+        Json::Array(vec![ $( $element ),* ])
+    };
 }
 
 #[test]
