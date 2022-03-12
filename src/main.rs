@@ -109,6 +109,11 @@ fn main() {
         ("name".to_string(), Json::String("Jim Blendy".to_string())),
         ("class_of".to_string(), Json::Number(1926.0)),
         ("major".to_string(), Json::String("Tibetan throat singing".to_string()))
+    ].into_iter().collect())),
+    Json::Object(Box::new(vec![
+        ("name".to_string(), Json::String("Jason Orendrff".to_string())),
+        ("class_of".to_string(), Json::Number(1702.0)),
+        ("major".to_string(), Json::String("Knots".to_string()))
     ].into_iter().collect()))
     ]);
 }
