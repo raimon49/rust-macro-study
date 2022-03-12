@@ -104,7 +104,7 @@ fn main() {
     const CARGO_TOML: &str = include_str!("../Cargo.toml");
     println!("Cargo.toml:\n\n {}", CARGO_TOML);
 
-    let students = Json::Array(vec![
+    let _students = Json::Array(vec![
     Json::Object(Box::new(vec![
         ("name".to_string(), Json::String("Jim Blendy".to_string())),
         ("class_of".to_string(), Json::Number(1926.0)),
