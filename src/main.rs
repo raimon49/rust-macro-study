@@ -72,6 +72,25 @@ fn json_null() {
     my_assert_eq!(json!(null), Json::Null);
 }
 
+#[test]
+fn json_arraY_with_json_element() {
+    let macro_generated_value = json!(
+        [
+            {
+                "pitch": 440.0
+            }
+        ]
+        );
+    let hand_coded_value =
+        Json::Array(vec![
+            Json::Object(Box::new(vec![
+                ("pitch".to_string(), Json::Number(440.0))
+            ].into_iter().collect()))
+        ]);
+
+    my_assert_eq!(macro_generated_value, hand_coded_value);
+}
+
 fn main() {
     // trueで読みだすと定義したマクロ呼び出しの展開前と展開後のコードを出力する
     // trace_macros!(true);
