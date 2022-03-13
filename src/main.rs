@@ -73,7 +73,7 @@ fn json_null() {
 }
 
 #[test]
-fn json_arraY_with_json_element() {
+fn json_array_with_json_element() {
     let macro_generated_value = json!(
         [
             {
