@@ -65,6 +65,9 @@ macro_rules! json {
     ([ $( $element:tt ),* ]) => {
         Json::Array(vec![ $( $element ),* ])
     };
+    ({ $( $key:tt : $value:tt ), * }) => {
+        Json::Object(...)
+    };
 }
 
 #[test]
