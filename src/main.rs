@@ -68,6 +68,9 @@ macro_rules! json {
     ({ $( $key:tt : $value:tt ), * }) => {
         Json::Object(...)
     };
+    ($oter:tt) => {
+        // TODO
+    };
 }
 
 #[test]
