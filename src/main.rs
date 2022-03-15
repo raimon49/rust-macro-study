@@ -69,7 +69,7 @@ macro_rules! json {
         Json::Object(...)
     };
     ($oter:tt) => {
-        // TODO
+        // TODO 数値、文字列、真偽値
     };
 }
 
