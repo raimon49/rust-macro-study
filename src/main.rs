@@ -63,7 +63,7 @@ macro_rules! json {
         Json::Null
     };
     ([ $( $element:tt ),* ]) => {
-        Json::Array(my_vec![ $( $element ),* ])
+        Json::Array(my_vec![ $( json!($element) ),* ])
     };
     ({ $( $key:tt : $value:tt ), * }) => {
         Json::Object(...)
