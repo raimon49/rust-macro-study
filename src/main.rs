@@ -66,7 +66,9 @@ macro_rules! json {
         Json::Array(my_vec![ $( json!($element) ),* ])
     };
     ({ $( $key:tt : $value:tt ), * }) => {
-        Json::Object(...)
+        Json::Object(Box::new(my_vec![
+            $( ($key.to_string(), json!($value)) ),*
+        ].into_iter().collect()))
     };
     ($oter:tt) => {
         // TODO 数値、文字列、真偽値
