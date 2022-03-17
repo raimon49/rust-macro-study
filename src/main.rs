@@ -1,3 +1,4 @@
+#[recursion_limit = "256"] // 再帰呼び出しの上限回数をデフォルトの64から変更
 #[feature(trace_macros)]
 macro_rules! my_assert_eq {
     // パターンを定義し、パターンマッチした対象に適用するテンプレートを書く
