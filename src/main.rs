@@ -59,6 +59,12 @@ enum Json {
     Object(Box<HashMap<String, Json>>)
 }
 
+impl From<bool> for Json {
+    fn from(b: bool) -> Json {
+        Json::Boolean(b)
+    }
+}
+
 macro_rules! json {
     (null) => {
         Json::Null
