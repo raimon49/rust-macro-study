@@ -65,6 +65,12 @@ impl From<bool> for Json {
     }
 }
 
+impl From<i32> for Json {
+    fn from(i: i32) -> Json {
+        Json::Number(i as f64)
+    }
+}
+
 macro_rules! json {
     (null) => {
         Json::Null
