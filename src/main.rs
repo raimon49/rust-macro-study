@@ -71,6 +71,12 @@ impl From<i32> for Json {
     }
 }
 
+impl From<String> for Json {
+    fn from(s: String) -> Json {
+        Json::String(s)
+    }
+}
+
 macro_rules! json {
     (null) => {
         Json::Null
