@@ -65,12 +65,6 @@ impl From<bool> for Json {
     }
 }
 
-impl From<i32> for Json {
-    fn from(i: i32) -> Json {
-        Json::Number(i as f64)
-    }
-}
-
 impl From<String> for Json {
     fn from(s: String) -> Json {
         Json::String(s)
@@ -180,4 +174,6 @@ fn main() {
         ("major".to_string(), Json::String("Knots".to_string()))
     ].into_iter().collect()))
     ]);
+
+    impl_from_num_for_json!(u8 i8 u16 i16 u32 i32 u64 i64 usize isize f32 f64);
 }
