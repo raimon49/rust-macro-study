@@ -88,7 +88,7 @@ macro_rules! impl_from_num_for_json {
         $(
             impl From<$t> for Json {
                 fn from(n: $t) -> Json {
-                    Json::Number(n as f 64)
+                    Json::Number(n as f64)
                 }
             }
          )*
