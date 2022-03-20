@@ -83,6 +83,18 @@ impl<'a> From<&'a str> for Json {
     }
 }
 
+macro_rules! impl_from_num_for_json {
+    ( $( $t:ident )* ) => {
+        $(
+            impl From<$t> for Json {
+                fn from(n: $t) -> Json {
+                    Json::Number(n as f 64)
+                }
+            }
+         )*
+    };
+}
+
 macro_rules! json {
     (null) => {
         Json::Null
