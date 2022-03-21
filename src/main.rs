@@ -77,6 +77,15 @@ impl<'a> From<&'a str> for Json {
     }
 }
 
+/**
+ * 以下のような引数で指定された型ごとのtraitを生成するマクロ
+ *
+ * impl From<i32> for Json {
+ *     fn from(i: i32) -> Json {
+ *         Json::Number(i as f64)
+ *     }
+ * }
+ */
 macro_rules! impl_from_num_for_json {
     ( $( $t:ident )* ) => {
         $(
