@@ -110,8 +110,8 @@ macro_rules! json {
             $( ($key.to_string(), json!($value)) ),*
         ].into_iter().collect()))
     };
-    ($oter:tt) => {
-        // TODO 数値、文字列、真偽値
+    ($other:tt) => {
+        Json::from($other)
     };
 }
 
