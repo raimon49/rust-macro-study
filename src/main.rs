@@ -184,5 +184,18 @@ fn main() {
     ].into_iter().collect()))
     ]);
 
+    let _students_via_macro = json!([
+        {
+            "name": "Jim Blendy",
+            "class_of": 1926,
+            "major": "Tibetan throat singing"
+        },
+        {
+            "name": "Jason Orendrff",
+            "class_of": 1702,
+            "major": "Knots"
+        }
+    ]);
+
     impl_from_num_for_json!(u8 i8 u16 i16 u32 i32 u64 i64 usize isize f32 f64);
 }
