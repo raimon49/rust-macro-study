@@ -197,5 +197,7 @@ fn main() {
         }
     ]);
 
+    my_assert_eq!(_students, _students_via_macro);
+
     impl_from_num_for_json!(u8 i8 u16 i16 u32 i32 u64 i64 usize isize f32 f64);
 }
