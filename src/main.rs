@@ -171,6 +171,7 @@ fn main() {
     const CARGO_TOML: &str = include_str!("../Cargo.toml");
     println!("Cargo.toml:\n\n {}", CARGO_TOML);
 
+    // 自前コードでJson型を生成
     let students_via_code = Json::Array(vec![
     Json::Object(Box::new(vec![
         ("name".to_string(), Json::String("Jim Blendy".to_string())),
@@ -184,6 +185,7 @@ fn main() {
     ].into_iter().collect()))
     ]);
 
+    // 自前マクロで引数をパースしてJson型を生成
     let students_via_macro = json!([
         {
             "name": "Jim Blendy",
