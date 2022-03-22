@@ -171,7 +171,7 @@ fn main() {
     const CARGO_TOML: &str = include_str!("../Cargo.toml");
     println!("Cargo.toml:\n\n {}", CARGO_TOML);
 
-    let _students = Json::Array(vec![
+    let students_via_code = Json::Array(vec![
     Json::Object(Box::new(vec![
         ("name".to_string(), Json::String("Jim Blendy".to_string())),
         ("class_of".to_string(), Json::Number(1926.0)),
@@ -184,7 +184,7 @@ fn main() {
     ].into_iter().collect()))
     ]);
 
-    let _students_via_macro = json!([
+    let students_via_macro = json!([
         {
             "name": "Jim Blendy",
             "class_of": 1926,
@@ -197,7 +197,7 @@ fn main() {
         }
     ]);
 
-    my_assert_eq!(_students, _students_via_macro);
+    my_assert_eq!(students_via_code, students_via_macro);
 
     impl_from_num_for_json!(u8 i8 u16 i16 u32 i32 u64 i64 usize isize f32 f64);
 }
