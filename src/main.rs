@@ -98,6 +98,7 @@ macro_rules! impl_from_num_for_json {
     };
 }
 
+#[macro_export]
 macro_rules! json {
     (null) => {
         Json::Null
