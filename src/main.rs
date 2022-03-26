@@ -202,6 +202,7 @@ fn main() {
 
     my_assert_eq!(students_via_code, students_via_macro);
 
+    // 数値型をJsonにするためのtraitをマクロで生成
     impl_from_num_for_json!(u8 i8 u16 i16 u32 i32 u64 i64 usize isize f32 f64);
 
     // 定義したマクロはデータに任意のRust式も書ける
