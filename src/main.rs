@@ -140,6 +140,15 @@ fn json_array_with_json_element() {
     my_assert_eq!(macro_generated_value, hand_coded_value);
 }
 
+macro_rules! complain {
+    ($msg:expr) => {
+        println!("Complaint field: {}", $msg);
+    };
+    (user : $userid:tt , $msg:expr) => {
+        println!("Complaint from user {}: {}", $userid, $msg);
+    }
+}
+
 fn main() {
     // trueで読みだすと定義したマクロ呼び出しの展開前と展開後のコードを出力する
     // trace_macros!(true);
