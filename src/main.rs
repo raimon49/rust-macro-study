@@ -141,7 +141,7 @@ fn json_array_with_json_element() {
 }
 
 macro_rules! complain {
-    ($msg:expr) => {
+    (msg : $msg:expr) => {
         println!("Complaint field: {}", $msg);
     };
     (user : $userid:tt , $msg:expr) => {
@@ -221,4 +221,6 @@ fn main() {
         "width": width,
         "height": (width * 9.0 / 4.9)
     });
+
+    complain!(user: "Jimb", "the AI lab's chatbots keep picking on me");
 }
