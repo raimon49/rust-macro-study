@@ -223,4 +223,5 @@ fn main() {
     });
 
     complain!(user: "Jimb", "the AI lab's chatbots keep picking on me");
+    complain!(msg: "the AI lab's chatbots keep picking on me");
 }
