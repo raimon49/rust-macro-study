@@ -1,5 +1,7 @@
 #[recursion_limit = "256"] // 再帰呼び出しの上限回数をデフォルトの64から変更
 #[feature(trace_macros)]
+// 詳しいマクロの書き方は "The Little Book of Rust Macros" も参照
+// https://danielkeep.github.io/tlborm/book/
 macro_rules! my_assert_eq {
     // パターンを定義し、パターンマッチした対象に適用するテンプレートを書く
     // フラグメント型が「:expr」なので、$leftも$rightも引数に式が来ることを期待している
